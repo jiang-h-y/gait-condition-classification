@@ -1,1 +1,5 @@
-# ds4400-final-proj
+# Gait Condition Classification
+
+## Problem Description
+
+## Directory
