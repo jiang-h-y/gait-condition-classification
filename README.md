@@ -4,6 +4,10 @@
 
 ## Directory
 
+[`eda.ipynb`](./eda.ipynb)
+
+This file contains exploratory data analysis, in which we computed summary statistics, created visualizations, or performed miscellaneous transformations to the data.
+
 [`manual_tabular_features.ipynb`](./manual_tabular_features.ipynb)
 
 We attempted to manually engineer tabular features based on the time-series data, which could be used for various ML models that are not specifically designed for time-series data.
