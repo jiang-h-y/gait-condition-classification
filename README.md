@@ -7,13 +7,19 @@ This project focuses on predicting/classifying three different walking condition
 
 ## Directory
 
+[`analysis.ipynb`](./analysis.ipynb)
+
 [`eda.ipynb`](./eda.ipynb)
 
 This file contains exploratory data analysis, in which we computed summary statistics, created visualizations, or performed miscellaneous transformations to the data.
 
-[`manual_tabular_features.ipynb`](./manual_tabular_features.ipynb)
+[`/tabular`](./tabular)
 
-We attempted to manually engineer tabular features based on the time-series data, which could be used for various ML models that are not specifically designed for time-series data.
+This folder contains analyses in which we feature-engineered the time-series data to create tabular features. These tabular features can be used on general classifier models that are not specifically designed for time-series data, which allows us to use a greater variety of models.
+
+[`/tabular/manual_tabular_features.ipynb`](./tabular/manual_tabular_features.ipynb)
+
+We attempted to manually engineer tabular features.
 
 The engineered features correspond to three categories:
 1. **Raw Statistics:** summary statistics for the raw time-series data
@@ -25,3 +31,13 @@ After our first attempt at using an SVM model on thr raw and differential statis
 We decided to use the `tsfresh` library to produce tabular features instead. This library is more optimized at producing and selecting a variety of tabular time-series features.
 
 This file is archived for reference, but we are no longer using it as an active part of our analysis pipeline.
+
+[`/tabular/analysis_interdependent.ipynb`](./tabular/analysis_interdependent.ipynb)
+
+In this analysis, we modeled the angles of different leg and joint combinations as interdependent. Each observation contained angle measurements for all leg and joint combinations. 
+
+Our models all performed almost perfectly, which we believe is due to the small size of the feature-engineered dataset. As a result, the metrics may be artifically inflated.
+
+[`/tabular/analysis_independent.ipynb`](./tabular/analysis_independent.ipynb)
+
+To combat the inflated scores of the previous analysis, we tried to make the simplifying assumption that each leg and joint combination had independent angles. This means that each observation only contained one angle measurement, which allowed for a larger dataset. However, with this assumption, none of the models were able to perform well on the data.
