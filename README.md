@@ -9,6 +9,8 @@ This project focuses on predicting/classifying three different walking condition
 
 [`analysis.ipynb`](./analysis.ipynb)
 
+This file contains our main modeling pipeline, using models designed for time-series data. KNN with Dynamic Time Warping (DTW) and LSTM models are the focus of this analysis.
+
 [`eda.ipynb`](./eda.ipynb)
 
 This file contains exploratory data analysis, in which we computed summary statistics, created visualizations, or performed miscellaneous transformations to the data.
